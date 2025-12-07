@@ -1,23 +1,19 @@
-# ---- .NET / ASP.NET Core ----
-backend/bin/
-backend/obj/
-backend/*.user
-backend/*.suo
-backend/*.vspscc
-backend/*.vssscc
-backend/.vs/
-backend/Properties/launchSettings.json
-backend/*.db
-backend/*.log
-
-# Rider IDE files
-.idea/
-*.sln.iml
-
 # User-specific files
 *.swp
 *.swo
 *.tmp
+
+# Python Compiled Files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django Files
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.pot
 
 # ---- Node / React / Vite ----
 frontend/node_modules/
@@ -45,4 +41,4 @@ frontend/yarn-error.log*
 .env
 .env.local
 .env.*.local
-
+.venv
