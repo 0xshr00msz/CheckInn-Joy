@@ -2,8 +2,21 @@ import { createContext, useContext, useState, useEffect, Children } from "react"
 
 const context = createContext([])
 
-const contextProvider = ({children}) => {
+const userContextProvider = ({children}) => {
+    const [currentUser, setCurrentUser] = React.useState(null);
 
+    const fetchCurrentUser = async () => {
+        let response = await fetch()
+        response = await response.json()
+        setCurrentUser(response)
+    }
+
+    return (
+        <context value = {{ currentUser, fetchCurrentUser }}>
+            {children}
+        </context>
+    )
 }
 
-export {context, contextProvider}
+export {context, userContextProvider}
+export const useCurrentUser = () => React.useContext(context)
